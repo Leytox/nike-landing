@@ -20,12 +20,18 @@ const Hero = () => {
           <br />
           <span className="text-coral-red inline-block mt-3">Nike</span> Shoes
         </h1>
-        <p className="font-montserrat text-slate-gray text-lg leading-8 mt-6 mb-14 sm:max-w-sm">
+        <p className="font-montserrat text-slate-gray text-lg leading-8 mt-6 mb-10 sm:max-w-sm">
           Discover stylish Nike arrivals, quality comfort, and innovation for
           your active life.
         </p>
-        <Button label="Shop now" iconURL={arrowRight}></Button>
-        <div className="flex justify-start items-start flex-wrap w-full mt-20 gap-16">
+        <Button
+          label="Shop now"
+          iconURL={arrowRight}
+          styles={
+            "text-white border-coral-red bg-coral-red hover:bg-white hover:text-coral-red hover:border-coral-red transition-all duration-300 ease-in-out"
+          }
+        />
+        <div className="flex justify-start items-start flex-wrap w-full mt-20 gap-16 max-sm:justify-center max-sm:mb-12">
           {statistics.map((stat, index) => (
             <div
               key={index}
@@ -40,7 +46,10 @@ const Hero = () => {
         </div>
       </div>
 
-      <div className="flex-col relative flex-1 flex justify-center items-center xl:min-h-screen max-xl:py-40 bg-primary bg-hero bg-cover bg-center">
+      <div
+        className="flex-col relative flex-1 flex justify-center items-center xl:min-h-screen max-xl:py-40 bg-primary bg-hero bg-cover
+        bg-center max-sm:gap-16 max-xl:hidden max-lg:hidden max-md:hidden max-sm:flex"
+      >
         <img
           id="hero-image"
           src={bigShoe1}
